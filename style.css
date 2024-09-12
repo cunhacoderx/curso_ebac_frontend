@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+
+    background-color: hsl(215, 100%, 92%);
+
+    display: flex;
+    align-items: center;
+}
+
+main {
+    max-width: 78rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3.6rem;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.6rem;
+    background-image: radial-gradient(circle at center, hsl(224, 71%, 37%), hsl(221, 70%, 22%) 100%);
+    color: hsl(40, 100%, 98%);
+    border-radius: 2.4rem;
+
+    &.invalid {
+        border: 0.4rem solid hsl(5, 70%, 36%);
+        animation: mainTilt 0.15s linear 2 alternate;
+    }
+
+    &.main-open {
+        animation: mainOpen 0.4s linear 1 forwards;
+    }
+}
+
+@keyframes mainTilt {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(2.5%);
+    }
+
+    100% {
+        transform: translateX(-2.5%);
+    }
+}
+
+@keyframes mainOpen {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+p {
+    font-size: 1.85em;
+    margin-bottom: 3.2rem;
+}
+
+#form {
+    margin: 2.8rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 2.2rem;
+    font-size: 1.5em;
+}
+
+input {
+    margin: 0 4.6rem 3.4rem;
+    padding: 1.2rem;
+    height: 25%;
+
+    background-color: hsl(25, 100%, 97%);
+    font-family: monospace;
+    font-size: 1.18em;
+    font-weight: 500;
+    color: black;
+}
+
+input:focus {
+    outline-width: 0;
+    border: 0.4rem solid hsl(51, 95%, 39%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+    margin-top: 3rem;
+    padding: 2.2rem;
+    align-self: center;
+    width: 45%;
+
+    font-size: 1.675em;
+    color: hsl(180, 35%, 10%);
+    background-color: hsl(260, 30%, 96%);
+    border-radius: 3.2rem;
+
+    &:enabled:hover {
+        font-size: 1.75em;
+        color: hsl(180, 35%, 2%);
+        background-color: hsl(51, 77%, 63%);
+    }
+
+    &:disabled {
+        opacity: 0.25;
+    }
+}
+
+#form-validity {
+    text-align: center;
+    align-self: center;
+    display: none;
+    color: hsl(0, 100%, 60%);
+    text-shadow: 0 0 1.5rem hsl(120, 35%, 42%);
+
+    &.valid {
+        color: rgb(230, 196, 3);
+        text-shadow: 0 0 1.5rem hsl(120, 40%, 40%);
+    }
+}
