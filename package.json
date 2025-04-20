@@ -1,0 +1,16 @@
+{
+  "name": "exercicio-less",
+  "version": "1.0.0",
+  "description": "\"Tarefa de converter landing page para modelo LESS\"",
+  "main": "index.js",
+  "scripts": {
+    "less": "lessc --source-map src/less/main.less build/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cunhacoderx",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^4.3.0",
+    "less-watch-compiler": "^1.16.3"
+  }
+}
