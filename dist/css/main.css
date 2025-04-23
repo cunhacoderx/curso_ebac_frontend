@@ -1,0 +1,139 @@
+body {
+  background-color: #333f42;
+  font-family: "Roboto Slab", serif;
+  color: #e7e3d8;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-family: "Metamorphous", serif;
+  color: #B4975A;
+  font-size: clamp(2rem, 4vw, 4rem);
+  text-align: center;
+  margin-top: clamp(1rem, 4vh, 3rem);
+}
+main {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  text-align: center;
+  padding: clamp(1rem, 5vw, 2rem);
+}
+button {
+  padding: clamp(0.5rem, 2vh, 1rem) clamp(1rem, 4vw, 2rem);
+  cursor: pointer;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  margin-top: 1em;
+  border-radius: 2rem;
+  background-color: #c8102E;
+  color: #e7e3d8;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+button:hover,
+button:focus {
+  background-color: #990c23;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+.resultado {
+  max-width: 420px;
+  width: 100%;
+  margin: clamp(2rem, 4vh, 4rem) auto 0;
+  padding: clamp(1rem, 3vw, 2rem);
+  border: 0.5em groove #B4975A;
+  background-color: #252e30;
+  border-radius: 1em;
+  text-align: center;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+  animation: aparecer 0.5s ease-out;
+}
+.resultado span {
+  font-weight: bold;
+  font-size: clamp(2rem, 5vw, 3em);
+  display: block;
+}
+.dados-opcoes {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 4vw, 2em);
+  margin: clamp(1rem, 2vh, 2rem) 0;
+  flex-wrap: wrap;
+}
+.opcao-dado {
+  cursor: pointer;
+  text-align: center;
+  font-size: clamp(1rem, 1.2vw, 1.2em);
+}
+.opcao-dado input[type="radio"] {
+  display: none;
+}
+.opcao-dado img {
+  width: clamp(64px, 10vw, 100px);
+  height: auto;
+  border: 4px solid transparent;
+  border-radius: 1em;
+  transition: all 0.3s ease;
+}
+.opcao-dado img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+.opcao-dado span {
+  display: block;
+  margin-top: 0.5em;
+}
+.opcao-dado input[type="radio"]:checked + img {
+  border-color: #B4975A;
+  transform: scale(1.15);
+  box-shadow: 0 0 30px #B4975A;
+}
+@media (max-width: 1024px) {
+  main {
+    font-size: clamp(1rem, 2vw, 1.6rem);
+  }
+  h1 {
+    font-size: clamp(3rem, 5vw, 4em);
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: clamp(2rem, 5vw, 3em);
+  }
+  main {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+  }
+  .dados-opcoes {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  .opcao-dado img {
+    width: clamp(64px, 20vw, 80px);
+  }
+  .resultado {
+    max-width: clamp(15em, 2vw, 30em);
+  }
+  .resultado span {
+    font-size: clamp(1.8rem, 6vw, 3em);
+  }
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
