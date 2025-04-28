@@ -1,0 +1,16 @@
+{
+  "name": "css-exercicio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/main.scss build/main.css --source-map --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "cunhacoderx",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.87.0"
+  }
+}

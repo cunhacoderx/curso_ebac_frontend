@@ -1,0 +1,45 @@
+@use '../abstracts/variables' as *;
+
+.products {
+  max-width: 720px;
+  width: 100%;
+  margin: 56px auto;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+}
+
+.product {
+  background: $color-highlight;
+  padding: 16px;
+  border-radius: 1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  &__image {
+    width: 100%;
+    border-radius: 1em;
+  }
+
+  &__name {
+    font-family: $font-primary;
+    color: $color-primary;
+    font-size: 1.2em;
+    margin: 12px 0;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-family: $font-secondary;
+    color: $bg-color;
+    font-size: 1em;
+  }
+
+  &--highlighted {
+    border: 2px solid $color-highlight;
+    background-color: $color-secondary;
+  }
+}

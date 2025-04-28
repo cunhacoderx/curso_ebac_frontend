@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+  background-color: $color-primary;
+  color: $color-highlight;
+  text-align: center;
+  padding: 24px 0;
+  font-family: $font-secondary;
+
+  &__address {
+    display: block;
+    font-weight: bold;
+  }
+
+  &__license {
+    margin-top: 8px;
+    font-size: 0.9em;
+  }
+}
+
