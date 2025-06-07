@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
-</head>
-<body>
-    <h1>Formulário de cadastro</h1>
-    <br />
-    <form>
-        <label for="user-name">Nome:</label>
-        <input id="user-name" type="text" placeholder="Insira seu nome">
-        <br />
-        <label for="user-email">E-mail:</label>
-        <input id="user-email" type="email" placeholder="exemplo@exemplo.com">
-        <br />
-        <label for="user-password">Senha:</label>
-        <input id="user-password" type="password" placeholder="Ex: abcd1234">
-        <br />
-        <button type="submit">Cadastrar</button>
-    </form>
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Github</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img id="avatar" class="profile-avatar" src="https://via.placeholder.com/180x180" alt="." />
+        <h1 id="name" class="profile-name">Nome</h1>
+        <h2 id="login" class="profile-username">Nome de usuário</h2>
+        <ul class="numbers">
+          <li class="numbers-item">
+            <h4>Repositórios</h4>
+            <span id="repos"></span>
+          </li>
+          <li class="numbers-item">
+            <h4>Seguidores</h4>
+            <span id="seguidores"></span>
+          </li>
+          <li class="numbers-item">
+            <h4>Seguindo</h4>
+            <span id="seguindo"></span>
+          </li>
+        </ul>
+        <a href="#" id="profileLink" class="profile-link">Ver no Github</a>
+      </div>
+    </header>
+    <script src="script.js"></script>
+  </body>
 </html>
